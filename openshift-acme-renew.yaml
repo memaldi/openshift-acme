@@ -14,7 +14,7 @@ spec:
             spec:
                 containers:
                 - name: acme-renew
-                  image: docker-registry.default.svc:5000/eudbpedia/openshift-acme
+                  image: memaldi/openshift-acme
                   args: ["--renew",  "-d", "myapp.example.com", "--webroot", "/nginx-root", "--config-home", "/config", "--key-file", "/certs/server.key", "--fullchain-file", "/certs/server.crt", "--debug", "--force"]
                 volumeMounts:
                     - mountPath: /nginx-root
